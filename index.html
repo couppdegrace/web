@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booker - Современные книги для любых задач</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>BookStore</h1>
+        <p>Современные книги для любых задач</p>
+    </header>
+    <main>
+        <h2>Найдите идеальную книгу!</h2>
+        <div class="filters">
+            <label for="priceRange">Цена: <span id="priceValue">500</span> рублей</label>
+            <input type="range" id="priceRange" min="100" max="1000" value="500" step="50" oninput="updatePriceValue()">
+            <button onclick="filterProducts('favorite')">Показать избранное</button>
+            <button onclick="filterProducts('new')">Показать Новинки</button>
+            <button onclick="filterProducts('all')">Показать всё</button>
+        </div>
+        <div class="product-gallery">
+            <div class="product" data-price="500" data-favorite="false" data-new="true">
+                <img src="book1.jpg" alt="Книга 1">
+                <h3>Название книги 1</h3>
+                <p>Автор: Автор 1</p>
+                <p>Цена: 500 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="400" data-favorite="false" data-new="false">
+                <img src="book2.jpg" alt="Книга 2">
+                <h3>Название книги 2</h3>
+                <p>Автор: Автор 2</p>
+                <p>Цена: 400 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+            <div class="product" data-price="300" data-favorite="false" data-new="true">
+                <img src="book3.jpg" alt="Книга 3">
+                <h3>Название книги 3</h3>
+                <p>Автор: Автор 3</p>
+                <p>Цена: 300 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="600" data-favorite="false" data-new="false">
+                <img src="book4.jpg" alt="Книга 4">
+                <h3>Название книги 4</h3>
+                <p>Автор: Автор 4</p>
+                <p>Цена: 600 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+            <div class="product" data-price="700" data-favorite="false" data-new="true">
+                <img src="book5.jpg" alt="Книга 5">
+                <h3>Название книги 5</h3>
+                <p>Автор: Автор 5</p>
+                <p>Цена: 700 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="200" data-favorite="false" data-new="false">
+                <img src="book66.jpg" alt="Книга 6">
+                <h3>Название книги 6</h3>
+                <p>Автор: Автор 6</p>
+                <p>Цена: 200 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Booker. Все права защищены.</p>
+        <p>Свяжитесь с нами: <a href="mailto:info@bookstore.ru">info@bookstore.ru</a></p>
+        <p>Следите за нами в социальных сетях:</p>
+        <p>
+            <a href="#">ВКонтакте</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>
